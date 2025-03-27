@@ -1,0 +1,17 @@
+name: "learn github dispatch event"
+on: 
+  workflow_dispatch:
+      inputs:
+       chosen_os:
+         type: choice
+         required: true
+         options:
+           - macOS
+           - ubuntu
+
+jobs:
+ test:
+  runs-on: [self-hosted,"${{inputs.chosen_os}}"]
+  steps:
+    -  run: echo "Hello World"
+
