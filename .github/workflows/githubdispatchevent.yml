@@ -11,7 +11,7 @@ on:
 
 jobs:
  test:
-  runs-on: [linux,"${{inputs.chosen_os}}"]
+  runs-on: [ubuntu-latest,"${{inputs.chosen_os}}"]
   steps:
     -  run: echo "Hello World"
 
